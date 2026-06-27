@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import "./App.css";
@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div>
         <Main siteName="Hdrezka" />
-        <Main />
         <Footer />
       </div>
     );
