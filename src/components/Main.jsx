@@ -16,6 +16,7 @@ class Main extends Component {
 
     return (
       <main className="main">
+        <h1>{this.props.siteName}</h1>
         <section className="story">
           <h2>Інтерстелер</h2>
 
