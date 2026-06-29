@@ -1,22 +1,9 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class Main extends Component {
   render() {
-    const actors = [
-      "Метью Макконахі",
-      "Енн Гетевей",
-      "Джессіка Честейн",
-      "Білл Ірвін",
-      "Еллен Берстін",
-      "Майкл Кейн",
-      "Метт Деймон",
-      "Кейсі Аффлек",
-      "Тімоті Шаламе",
-    ];
-
     return (
       <main className="main">
-        <h1>{this.props.siteName}</h1>
         <section className="story">
           <h2>Інтерстелер</h2>
 
@@ -58,8 +45,8 @@ class Main extends Component {
         <section className="actors">
           <h2>Актори</h2>
           <ul>
-            {actors.map((actor, index) => (
-              <li key={index}>{actor} </li>
+            {this.props.actors.map((actor, index) => (
+              <li key={index}>{actor}</li>
             ))}
           </ul>
         </section>
@@ -68,16 +55,13 @@ class Main extends Component {
           <h2>Загальна інформація</h2>
 
           <ul>
-            <li>Країна: США, Велика Британія</li>
+            <li>Країна: {this.props.countri}</li>
 
-            <li>
-              Студія: Paramount Pictures, Warner Bros. Pictures, Legendary Pictures, Syncopy, Lynda
-              Obst Productions
-            </li>
+            <li>Студія: {this.props.stydio}</li>
 
-            <li>Жанр: наукова фантастика, драма, пригоди</li>
+            <li>Жанр: {this.props.ganer}</li>
 
-            <li>Рік випуску: 2014</li>
+            <li>Рік випуску: {this.props.year}</li>
           </ul>
         </section>
       </main>
